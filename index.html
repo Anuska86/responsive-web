@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web</title>
+    <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar background">
+            <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+            <ul class="nav-list">
+                <li><a href="#variedades">Variedades</a></li>
+                <li><a href="#donde">Dónde estamos</a></li>
+            </ul>
+            <div class="rightNav">
+                <input type="text" name="search" id="search" />
+                <button class="button-5" role="button">BUSCAR</button>
+            </div>
+        </nav>
+    </header>
+    <!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+    <a href="#" class="w3-bar-item w3-button">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  </div>
+    <main>
+        <h1>Lo último de Tesla</h1>
+        <div class="main-content">
+        <div style="border: 1px solid black;padding: 10px;">
+        <div class="image_with_text"><img src="https://tesla-cdn.thron.com/delivery/public/image/tesla/a269d7b4-87a9-4057-9ac5-2565e56a188e/bvlatuR/std/4096x2560/Homepage-Model-3-Desktop-LHD?quality=auto-medium&format=auto" alt="Model 3" width="300px" height="200px"><h2>Model 3</h2><span style="margin: 6px 0px;" class="separator"></span><p></p>
+        <p style="text-align: center;">Descubre la velocidad.</p>
+        </div>
+        <div class="image_with_text"><img src="https://tesla-cdn.thron.com/delivery/public/image/tesla/dfa1ee09-8585-422e-a32a-067e14159aa0/bvlatuR/std/2880x2400/Homepage-Model-Y-Global-Desktop?quality=auto-medium&format=auto" alt="Model Y" width="300px" height="200px"><h2>Model Y</h2><span style="margin: 6px 0px;" class="separator"></span><p></p>
+        <p style="text-align: center;">Disfruta la elegancia.</p>
+        </div>
+        <div class="image_with_text"><img src="https://tesla-cdn.thron.com/delivery/public/image/tesla/898c2038-c428-452c-84bf-034d5c48ca8e/bvlatuR/std/4096x2560/Model-S-homepage-desktop" alt="Model S" width="300px" height="200px"><h2>Model S</h2><span style="margin: 6px 0px;" class="separator"></span><p></p>
+            <p style="text-align: center;">Escoge lo último en tecnología.</p>
+        </div>
+    </div>
+        <div id="formulario">
+            <form method="post" id="formdata" style="margin-top: 15px;">
+                <div id="campos"><label for="nombre">Nombre: </label><input type="text" name="nombre" id="nombre" required="required"></div></br>
+                <div id="campos"><label for="apellidos">Apellidos: </label><input type="text" name="apellidos" id="apellidos" required="required"></div></br>
+                <div id="campos"><label for="direccion">Dirección: </label><input type="text" name="direccion" id="direccion" required="required"></div></br>
+                <div id="campos">Género: <input type="radio" name="genero" id="hombre" checked="checked"><label for="hombre"> Hombre - </label><input type="radio" name="genero" id="mujer"><label for="mujer"> Mujer</label></div><br>
+                <div id="campos"><label for="mayor">Tengo más de 18 años </label><input type="checkbox" name="mayor" id="mayor" required="required"></div><br>
+                <div id="campos" style="margin-bottom: 15px;"><input type="button" id="botonenviar" value="Enviar"></div>
+            </form>
+        </div>
+        <div id="envio">
+            Sus datos han sido recibidos con éxito.
+        </div>
+        <script>
+            function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+            function validaForm(){
+                //Comprobación de los inputs
+                if($("#nombre").val() == ""){
+                    alert("El campo Nombre no puede estar vacío.");
+                    $("#nombre").focus();//El campo nombre recibe el foco
+                    return false;
+                }
+                if($("#apellidos").val() == ""){
+                    alert("El campo Apellidos no puede estar vacío.");
+                    $("#apellidos").focus();
+                    return false;
+                }
+                if($("#direccion").val() == ""){
+                    alert("El campo Dirección no puede estar vacío.");
+                    $("#direccion").focus();
+                    return false;
+                }
+            //Comprobación del checkbox
+            if(!$("#mayor").is(":checked")){
+                alert("Debe confirmar que es mayor de 18 años.");
+                return false;
+            }
+            return true; // Si todo está correcto
+            }
+        $(document).ready(function() {
+            $("#botonenviar").click( function() {
+                if(validaForm()==true){   
+                    $('#botonenviar').attr('disabled');// Desactivamos el botón.
+                    $("#formulario").fadeOut("slow");   // Hacemos desaparecer el div "formulario" con un efecto fadeOut lento.
+                    $("#envio").delay(500).fadeIn("slow"); // Si todo estaba correcto, hacemos aparecer el div "envio" con un efecto fadeIn lento tras un delay de 0,5 segundos.
+                }
+            });
+        }  
+        );      
+        </script>
+    </main>
+    <footer>
+        <p> ©All rights reserved.</p>
+    </footer>
+</body>
+</html>
