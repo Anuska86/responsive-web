@@ -138,3 +138,27 @@ details[open] summary{
     color:rgb(3, 5, 34);
     border-radius:5px 5px 0 0;
 }
+
+.center-images{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .rowImages{
+        display: none;
+    }
+    .columnImages{
+        display: block;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .rowImages{
+        display: block;
+    }
+    .columnImages{
+        display: none;
+    }
+  }
