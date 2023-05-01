@@ -13,11 +13,12 @@
         <nav class="navbar background">
             <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
             <ul class="nav-list">
-                <li><a href="#variedades">Nuevos modelos</a></li>
-                <li><a href="#donde">Dónde estamos</a></li>
+                <li><a href="https://www.google.com">Nuevos modelos</a></li>
+                <li><a href="https://www.youtube.com">Dónde estamos</a></li>
             </ul>
             <div class="rightNav">
-                <input type="text" name="search" id="search" />
+                <label id="searchLabel" for="search" style="color:white">Modelos</label>
+                <input type="text" name="search" id="search" placeholder="Type some text"/>
                 <button class="button-5" role="button">BUSCAR</button>
             </div>
         </nav>
@@ -30,24 +31,24 @@
     <a href="#" class="w3-bar-item w3-button">Model S</a>
   </div>
     <main>
-        <h1>Lo último de Tesla</h1>
+        <h1 style="color:#58361e">Lo último de Tesla</h1>
         <div class="main-content">
         <div class="rowImages" style="border: 1px solid black;padding: 10px;">
-        <div class="image_with_text"><img src="https://tesla-cdn.thron.com/delivery/public/image/tesla/a269d7b4-87a9-4057-9ac5-2565e56a188e/bvlatuR/std/4096x2560/Homepage-Model-3-Desktop-LHD?quality=auto-medium&format=auto" alt="Model 3" width="300px" height="200px"><h2>Model 3</h2><span style="margin: 6px 0px;" class="separator"></span><p></p>
+        <div class="image_with_text"><img src="https://tesla-cdn.thron.com/delivery/public/image/tesla/a269d7b4-87a9-4057-9ac5-2565e56a188e/bvlatuR/std/4096x2560/Homepage-Model-3-Desktop-LHD?quality=auto-medium&format=auto" alt="Super Fast Model 3" width="300px" height="200px"><h2>Model 3</h2><span style="margin: 6px 0px;" class="separator"></span><p></p>
         <p style="text-align: center;">Descubre la velocidad.</p>
         <details>
             <summary>Más...</summary>
             <p>Descripción: Vehículo 5 puertas con 350cv, amplio maletero y autonomía para 740km de puro consumo eléctrico</p>
           </details>
         </div>
-        <div class="image_with_text"><img src="https://tesla-cdn.thron.com/delivery/public/image/tesla/dfa1ee09-8585-422e-a32a-067e14159aa0/bvlatuR/std/2880x2400/Homepage-Model-Y-Global-Desktop?quality=auto-medium&format=auto" alt="Model Y" width="300px" height="200px"><h2>Model Y</h2><span style="margin: 6px 0px;" class="separator"></span><p></p>
+        <div class="image_with_text"><img src="https://tesla-cdn.thron.com/delivery/public/image/tesla/dfa1ee09-8585-422e-a32a-067e14159aa0/bvlatuR/std/2880x2400/Homepage-Model-Y-Global-Desktop?quality=auto-medium&format=auto" alt="Elegant Model Y" width="300px" height="200px"><h2>Model Y</h2><span style="margin: 6px 0px;" class="separator"></span><p></p>
         <p style="text-align: center;">Disfruta la elegancia.</p>
                 <details>
           <summary>Más...</summary>
           <p>Descripción: Vehículo 5 puertas con 280cv, amplio maletero y autonomía para 650km de puro consumo eléctrico</p>
         </details>
         </div>
-        <div class="image_with_text"><img src="https://tesla-cdn.thron.com/delivery/public/image/tesla/898c2038-c428-452c-84bf-034d5c48ca8e/bvlatuR/std/4096x2560/Model-S-homepage-desktop" alt="Model S" width="300px" height="200px"><h2>Model S</h2><span style="margin: 6px 0px;" class="separator"></span><p></p>
+        <div class="image_with_text"><img src="https://tesla-cdn.thron.com/delivery/public/image/tesla/898c2038-c428-452c-84bf-034d5c48ca8e/bvlatuR/std/4096x2560/Model-S-homepage-desktop" alt="Beautiful Model S" width="300px" height="200px"><h2>Model S</h2><span style="margin: 6px 0px;" class="separator"></span><p></p>
             <p style="text-align: center;">Escoge lo último en tecnología.</p>
                     <details>
           <summary>Más...</summary>
@@ -84,7 +85,10 @@
                 <div id="campos"><label for="nombre">Nombre: </label><input type="text" name="nombre" id="nombre" required="required"></div></br>
                 <div id="campos"><label for="apellidos">Apellidos: </label><input type="text" name="apellidos" id="apellidos" required="required"></div></br>
                 <div id="campos"><label for="direccion">Dirección: </label><input type="text" name="direccion" id="direccion" required="required"></div></br>
+                <fieldset class="form-group">
+                    <legend class="legend-label">Género</legend>
                 <div id="campos">Género: <input type="radio" name="genero" id="hombre" checked="checked"><label for="hombre"> Hombre - </label><input type="radio" name="genero" id="mujer"><label for="mujer"> Mujer</label></div><br>
+            </fieldset>
                 <div id="campos"><label for="mayor">Tengo más de 18 años </label><input type="checkbox" name="mayor" id="mayor" required="required"></div><br>
                 <div id="campos" style="margin-bottom: 15px;"><input type="button" id="botonenviar" value="Enviar"></div>
             </form>
@@ -136,8 +140,8 @@ function w3_close() {
         );      
         </script>
     </main>
-    <footer>
-        <p> ©All rights reserved.</p>
+    <footer style="background-color: #58361e;">
+        <p style="color:white"> ©All rights reserved.</p>
     </footer>
 </body>
 </html>

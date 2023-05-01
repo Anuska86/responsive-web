@@ -23,7 +23,7 @@
     color: white;
 } 
 .nav-list li a:hover {
-    color: #ebb692;
+    color: #58361e;
 }
 .rightNav {
     width: 50%;
@@ -44,7 +44,7 @@
 .button-5 {
   align-items: center;
   background-clip: padding-box;
-  background-color: #fa6400;
+  background-color: #9c5423;
   border: 1px solid transparent;
   border-radius: .25rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
